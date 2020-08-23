@@ -1,18 +1,21 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-	int i, j,gcd=1;
-	printf("Enter first number : ");
-	scanf("%d", &i);
-	printf("Enter second number : ");
-	scanf("%d", &j);
-	printf("Greatest common divisor = ");
-	while (j != 0) {
-		int t = j;
-		j = i % j;
-		i = t;
-	}
-	gcd = i;
-	printf("%d", gcd);
-	
+    int num1, num2, result = 0;
+    printf("Enter first number : ");
+    scanf("%d", &num1);
+    printf("Enter second number : ");
+    scanf("%d", &num2);
+    printf("Greatest common divisor = ");
+    int minNum;
+    if (num1 > num2) minNum = num2;
+    else minNum = num1;
+    while (minNum > 0) {
+        if (num1 % minNum == 0 && num2 % minNum == 0) {
+            printf("%d", minNum);
+            break;
+        }
+        minNum--;
+    }
+    return 0;
 }

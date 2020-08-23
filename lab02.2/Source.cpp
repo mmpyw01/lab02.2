@@ -7,6 +7,7 @@ int main()
     printf("Enter second number : ");
     scanf("%d", &num2);
     printf("Greatest common divisor = ");
+
     int minNum;
     if (num1 > num2) minNum = num2;
     else minNum = num1;
